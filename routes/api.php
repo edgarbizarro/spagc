@@ -9,3 +9,4 @@ Route::get('/user', function (Request $request) {
 
 
 Route::apiResource('states', \App\Http\Controllers\StateController::class);
+Route::apiResource('cities', \App\Http\Controllers\CityController::class);

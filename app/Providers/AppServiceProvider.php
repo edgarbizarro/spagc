@@ -14,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             \App\Domain\Repositories\StateRepositoryInterface::class,
             \App\Infrastructure\Repositories\StateRepository::class,
+
+            \App\Domain\Repositories\CityRepositoryInterface::class,
+            \App\Infrastructure\Repositories\CityRepository::class,
         );
     }
 
