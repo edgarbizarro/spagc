@@ -26,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
 
             \App\Domain\Repositories\DiscountRepositoryInterface::class,
             \App\Infrastructure\Repositories\DiscountRepository::class,
+
+            \App\Domain\Repositories\ProductRepositoryInterface::class,
+            \App\Infrastructure\Repositories\ProductRepository::class,
         );
     }
 
