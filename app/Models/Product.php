@@ -14,6 +14,6 @@ class Product extends Model
 
     public function campaigns()
     {
-        return $this->belongsToMany(Campaign::class, 'campaign_product');
+        return $this->belongsToMany(Campaign::class, 'campaign_product')->withTimestamps();
     }
 }

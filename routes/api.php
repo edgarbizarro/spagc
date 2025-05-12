@@ -14,3 +14,9 @@ Route::apiResource('clusters', \App\Http\Controllers\ClusterController::class);
 Route::apiResource('campaigns', \App\Http\Controllers\CampaignController::class);
 Route::apiResource('discounts', \App\Http\Controllers\DiscountController::class);
 Route::apiResource('products', \App\Http\Controllers\ProductController::class);
+
+Route::prefix('campaigns/{campaign}/products')->group(function () {
+    Route::get('/', [\App\Http\Controllers\CampaignProductController::class, 'index']);
+    Route::post('/', [\App\Http\Controllers\CampaignProductController::class, 'store']);
+    Route::delete('/{product}', [\App\Http\Controllers\CampaignProductController::class, 'destroy']);
+});
