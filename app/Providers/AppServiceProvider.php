@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
 
             \App\Domain\Repositories\CampaignRepositoryInterface::class,
             \App\Infrastructure\Repositories\CampaignRepository::class,
+
+            \App\Domain\Repositories\DiscountRepositoryInterface::class,
+            \App\Infrastructure\Repositories\DiscountRepository::class,
         );
     }
 

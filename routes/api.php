@@ -12,3 +12,4 @@ Route::apiResource('states', \App\Http\Controllers\StateController::class);
 Route::apiResource('cities', \App\Http\Controllers\CityController::class);
 Route::apiResource('clusters', \App\Http\Controllers\ClusterController::class);
 Route::apiResource('campaigns', \App\Http\Controllers\CampaignController::class);
+Route::apiResource('discounts', \App\Http\Controllers\DiscountController::class);
