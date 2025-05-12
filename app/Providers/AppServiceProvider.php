@@ -17,6 +17,9 @@ class AppServiceProvider extends ServiceProvider
 
             \App\Domain\Repositories\CityRepositoryInterface::class,
             \App\Infrastructure\Repositories\CityRepository::class,
+
+            \App\Domain\Repositories\ClusterRepositoryInterface::class,
+            \App\Infrastructure\Repositories\ClusterRepository::class,
         );
     }
 
