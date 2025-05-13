@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam type string required Tipo do desconto: "percentage" ou "fixed". Example: percentage
+ * @bodyParam value numeric required Valor do desconto (>= 0). Example: 15.00
+ * @bodyParam campaign_id integer required ID da campanha vinculada. Example: 1
+ */
 class StoreDiscountRequest extends FormRequest
 {
     /**
@@ -11,7 +16,7 @@ class StoreDiscountRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     public function rules(): array

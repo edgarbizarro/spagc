@@ -5,6 +5,22 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $description
+ *
+ * Exemplo de uso:
+ * ```php
+ * $cluster = Cluster::find(1);
+ * return new ClusterResource($cluster);
+ * ```
+ *
+ * Propriedades:
+ * - id: Identificador único do cluster
+ * - name: Nome do cluster
+ * - description: Descrição do cluster
+ */
 class ClusterResource extends JsonResource
 {
     /**

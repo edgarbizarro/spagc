@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam name string optional Nome do cluster. Example: Cluster 1
+ * @bodyParam description string optional Descrição do cluster. Example: Descrição do cluster 1
+ */
 class UpdateClusterRequest extends FormRequest
 {
     /**

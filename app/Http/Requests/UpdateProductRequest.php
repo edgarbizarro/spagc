@@ -4,6 +4,12 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam name string optional Nome do produto. Example: Produto Exemplo
+ * @bodyParam description string optional Descrição do produto. Example: Descrição do produto exemplo
+ * @bodyParam price numeric optional Preço do produto (>= 0). Example: 19.99
+ * @bodyParam sku string optional Código de barras do produto (único). Example: PROD-001
+ */
 class UpdateProductRequest extends FormRequest
 {
     /**

@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam name string required Nome do cluster (deve ser único). Example: Interior Paulista
+ * @bodyParam description string optional Descrição do cluster. Example: Grupo de cidades do interior do estado de SP
+ */
 class StoreClusterRequest extends FormRequest
 {
     /**
@@ -11,7 +15,7 @@ class StoreClusterRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     public function rules(): array

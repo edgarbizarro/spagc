@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam name string required Nome da cidade. Example: Ribeirão Preto
+ * @bodyParam state_id integer required ID do estado ao qual a cidade pertence. Example: 1
+ * @bodyParam cluster_id integer required ID do cluster associado à cidade. Example: 2
+ */
 class StoreCityRequest extends FormRequest
 {
     /**
@@ -11,7 +16,7 @@ class StoreCityRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -42,5 +47,4 @@ class StoreCityRequest extends FormRequest
             }
         });
     }
-
 }

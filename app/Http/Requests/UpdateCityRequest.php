@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam name string optional Nome da cidade. Example: São Paulo
+ * @bodyParam state_id integer optional ID do estado. Example: 1
+ */
 class UpdateCityRequest extends FormRequest
 {
     /**

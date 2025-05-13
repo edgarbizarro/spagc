@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @bodyParam type string optional Tipo do desconto: "percentage" ou "fixed". Example: percentage
+ * @bodyParam value numeric optional Valor do desconto (>= 0). Example: 15.00
+ * @bodyParam campaign_id integer optional ID da campanha vinculada. Example: 1
+ */
 class UpdateDiscountRequest extends FormRequest
 {
     /**

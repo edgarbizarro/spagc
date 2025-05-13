@@ -5,12 +5,30 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+
+/**
+ * @property int $id
+ * @property string $name
+ * @property int $state_id
+ *
+ * Exemplo de uso:
+ * ```php
+ * $city = City::find(1);
+ * return new CityResource($city);
+ * ```
+ *
+ * Propriedades:
+ * - id: Identificador único da cidade
+ * - name: Nome da cidade
+ * - state_id: Identificador do estado ao qual a cidade pertence
+ */
 class CityResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
      *
-     * @return array<string, mixed>
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
      */
     public function toArray(Request $request): array
     {
