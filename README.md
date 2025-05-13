@@ -89,12 +89,6 @@ routes/
 ✔️ Produto não pode ser adicionado duas vezes à mesma campanha
 
 
-## ⚙️ Setup Local
-Pré-requisitos
-* Docker
-* Docker Compose
-
-
 ## 📊 Diagrama de Entidade-Relacionamento (Conceitual)
 
 O modelo conceitual da aplicação foi projetado para representar **relacionamentos reais** entre entidades envolvidas em uma campanha promocional regional.
@@ -132,9 +126,15 @@ O modelo conceitual da aplicação foi projetado para representar **relacionamen
 -   Cada **produto** pode ser incluído em várias campanhas, sem duplicidade na mesma.
   
   
+## ⚙️ Setup Local
+Pré-requisitos
+* Docker
+* Docker Compose
+
 
 
 ## 🛠️ Instruções para Execução
+
 
 ### 🛟 Pré-requisitos
 - Docker
@@ -196,8 +196,19 @@ sail npm install
 sail npm run dev
 ```
 
+### Opcional: Para executar os seeders, use o comando:
+```
+sail artisan db:seed
+```
+### Opcional: Se você quiser limpar o banco de dados antes de executar os seeders, use:
+```
+sail artisan migrate:fresh --seed
+```
 
-
+### Opcional: Para executar os tests, use:
+```
+sail artisan test
+```
 
 🧪 Testes
 bash
