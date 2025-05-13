@@ -15,25 +15,36 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(
-            \App\Domain\Repositories\StateRepositoryInterface::class,
-            \App\Infrastructure\Repositories\StateRepository::class,
+            \App\Domains\Repositories\StateRepositoryInterface::class,
+            \App\Infrastructure\Repositories\StateRepository::class
+        );
 
-            \App\Domain\Repositories\CityRepositoryInterface::class,
-            \App\Infrastructure\Repositories\CityRepository::class,
+        $this->app->bind(
+            \App\Domains\Repositories\CityRepositoryInterface::class,
+            \App\Infrastructure\Repositories\CityRepository::class
+        );
 
-            \App\Domain\Repositories\ClusterRepositoryInterface::class,
-            \App\Infrastructure\Repositories\ClusterRepository::class,
+        $this->app->bind(
+            \App\Domains\Repositories\ClusterRepositoryInterface::class,
+            \App\Infrastructure\Repositories\ClusterRepository::class
+        );
 
-            \App\Domain\Repositories\CampaignRepositoryInterface::class,
-            \App\Infrastructure\Repositories\CampaignRepository::class,
+        $this->app->bind(
+            \App\Domains\Repositories\CampaignRepositoryInterface::class,
+            \App\Infrastructure\Repositories\CampaignRepository::class
+        );
 
-            \App\Domain\Repositories\DiscountRepositoryInterface::class,
-            \App\Infrastructure\Repositories\DiscountRepository::class,
+        $this->app->bind(
+            \App\Domains\Repositories\DiscountRepositoryInterface::class,
+            \App\Infrastructure\Repositories\DiscountRepository::class
+        );
 
-            \App\Domain\Repositories\ProductRepositoryInterface::class,
-            \App\Infrastructure\Repositories\ProductRepository::class,
+        $this->app->bind(
+            \App\Domains\Repositories\ProductRepositoryInterface::class,
+            \App\Infrastructure\Repositories\ProductRepository::class
         );
     }
+
 
     /**
      * Bootstrap any application services.

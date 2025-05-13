@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Models\Discount;
 use Illuminate\Support\Collection;
-use App\Domain\Repositories\DiscountRepositoryInterface;
+use App\Domains\Repositories\DiscountRepositoryInterface;
 
 class DiscountRepository implements DiscountRepositoryInterface
 {

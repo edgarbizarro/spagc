@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Models\Product;
 use Illuminate\Support\Collection;
-use App\Domain\Repositories\ProductRepositoryInterface;
+use App\Domains\Repositories\ProductRepositoryInterface;
 
 class ProductRepository implements ProductRepositoryInterface
 {

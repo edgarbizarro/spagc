@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Models\Cluster;
 use Illuminate\Support\Collection;
-use App\Domain\Repositories\ClusterRepositoryInterface;
+use App\Domains\Repositories\ClusterRepositoryInterface;
 
 class ClusterRepository implements ClusterRepositoryInterface
 {

@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Models\Campaign;
 use Illuminate\Support\Collection;
-use App\Domain\Repositories\CampaignRepositoryInterface;
+use App\Domains\Repositories\CampaignRepositoryInterface;
 
 class CampaignRepository implements CampaignRepositoryInterface
 {

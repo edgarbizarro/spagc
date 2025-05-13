@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Models\City;
 use Illuminate\Support\Collection;
-use App\Domain\Repositories\CityRepositoryInterface;
+use App\Domains\Repositories\CityRepositoryInterface;
 
 class CityRepository implements CityRepositoryInterface
 {

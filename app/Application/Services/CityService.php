@@ -2,7 +2,7 @@
 
 namespace App\Application\Services;
 
-use App\Domain\Repositories\CityRepositoryInterface;
+use App\Domains\Repositories\CityRepositoryInterface;
 
 class CityService
 {

@@ -2,11 +2,11 @@
 
 namespace App\Application\Services;
 
-use App\Domain\Repositories\CityRepositoryInterface;
+use App\Domains\Repositories\DiscountRepositoryInterface;
 
-class CityService
+class DiscountService
 {
-    public function __construct(protected CityRepositoryInterface $repository) {}
+    public function __construct(protected DiscountRepositoryInterface $repository) {}
 
     public function all()
     {

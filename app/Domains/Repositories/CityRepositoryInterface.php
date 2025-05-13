@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Repositories;
+namespace App\Domains\Repositories;
 
 use Illuminate\Support\Collection;
 use App\Models\City;

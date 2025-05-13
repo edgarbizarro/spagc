@@ -2,7 +2,7 @@
 
 namespace App\Application\Services;
 
-use App\Domain\Repositories\StateRepositoryInterface;
+use App\Domains\Repositories\StateRepositoryInterface;
 
 class StateService
 {

@@ -2,7 +2,7 @@
 
 namespace App\Application\Services;
 
-use App\Domain\Repositories\CampaignRepositoryInterface;
+use App\Domains\Repositories\CampaignRepositoryInterface;
 use Illuminate\Validation\ValidationException;
 
 class CampaignService

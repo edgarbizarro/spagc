@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Models\State;
 use Illuminate\Support\Collection;
-use App\Domain\Repositories\StateRepositoryInterface;
+use App\Domains\Repositories\StateRepositoryInterface;
 
 class StateRepository implements StateRepositoryInterface
 {

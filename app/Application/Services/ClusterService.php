@@ -2,11 +2,11 @@
 
 namespace App\Application\Services;
 
-use App\Domain\Repositories\DiscountRepositoryInterface;
+use App\Domains\Repositories\ClusterRepositoryInterface;
 
-class DiscountService
+class ClusterService
 {
-    public function __construct(protected DiscountRepositoryInterface $repository) {}
+    public function __construct(protected ClusterRepositoryInterface $repository) {}
 
     public function all()
     {
