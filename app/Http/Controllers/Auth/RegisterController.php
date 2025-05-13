@@ -21,9 +21,6 @@ class RegisterController extends Controller
      * @bodyParam name string required The name of the user. Example: John Doe
      * @bodyParam email string required The email of the user. Example: john@example.com
      * @bodyParam password string required The password (min: 8 characters). Example: secret123
-     * @bodyParam password_confirmation string required The password confirmation. Example: secret123
-     * @bodyParam document string required The user's document (CPF/CNPJ). Example: 12345678901
-     * @bodyParam type string required The user type (individual or business). Example: individual
      *
      * @response 200 {
      *   "access_token": "token_value",
@@ -31,9 +28,7 @@ class RegisterController extends Controller
      *   "user": {
      *     "id": 1,
      *     "name": "John Doe",
-     *     "email": "john@example.com",
-     *     "document": "12345678901",
-     *     "type": "individual"
+     *     "email": "john@example.com"
      *   }
      * }
      * @response 422 {
@@ -49,8 +44,6 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
-            'document' => 'required|string|unique:users',
-            'type' => 'required|in:individual,business',
         ]);
 
         if ($validator->fails()) {
@@ -61,12 +54,7 @@ class RegisterController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'document' => $request->document,
-            'type' => $request->type,
         ]);
-
-        // Create a wallet for the user
-        $user->wallet()->create(['balance' => 0]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
 

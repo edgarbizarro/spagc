@@ -27,8 +27,6 @@ class LoginController extends Controller
      *     "id": 1,
      *     "name": "John Doe",
      *     "email": "john@example.com",
-     *     "document": "12345678901",
-     *     "type": "individual"
      *   }
      * }
      * @response 422 {
